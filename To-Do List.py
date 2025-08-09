@@ -3,7 +3,7 @@ f = open("To-Do List Files.txt")
 listCounter = 0
 
 print("========== To-Do List ==========")
-print(f.read(), "\n")
+print("\n", listCounter, f.read())
 
 userChoose = 0
 
@@ -23,7 +23,8 @@ while(userChoose != 5):
                 listCounter += 1
                 task = input("Enter Task you want to add: ")
                 with open("To-Do List Files.txt", "a") as f:
-                    f.write(listCounter, task, "\n")
+                    f.write(task)
+                    
             case 2:
                 task = input("Enter the task you want to be replace: ")
                 with open("To-Do List Files.txt", "w") as f:
